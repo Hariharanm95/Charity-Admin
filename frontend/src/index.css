@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Varela&display=swap');
 /* layout */
 :root {
-  --primary: #8e6f9b;
+  --primary: radial-gradient(circle, rgb(46, 58, 73) 0%, rgb(77, 94, 112) 100%);
   --error: #e7195a;
 }
 body {
@@ -11,7 +11,7 @@ body {
   font-family: "varela";
 }
 header {
-  background: #412e42;
+  background: radial-gradient(circle, rgb(46, 58, 73) 0%, rgb(77, 94, 112) 100%);
 }
 header .container {
   max-width: 1400px;
@@ -34,7 +34,7 @@ header a {
 /* homepage */
 .home {
   display: grid;
-  grid-template-columns: 3fr 1fr;
+  grid-template-columns: 2fr 2fr;
   gap: 100px;
 }
 .donation-details {
@@ -65,6 +65,7 @@ header a {
   border-radius: 50%;
   color: #333;
 }
+
 
 /* new workout form */
 label, input {
@@ -105,7 +106,7 @@ nav {
   align-items: center;
 }
 nav a {
-  margin-left: 10px;
+  margin: 10px;
 }
 nav span {
   color: #fff;
@@ -129,3 +130,35 @@ form.signup, form.login {
   background: #fff;
   border-radius: 4px;
 }
+
+.fundraiser-details span {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  cursor: pointer;
+  background: #f1f1f1;
+  padding: 6px;
+  border-radius: 50%;
+  color: #333;
+}
+
+.fundraiser-details h4 {
+  margin: 0 0 10px 0;
+  font-size: 1.2em;
+  color: var(--primary);
+}
+.fundraiser-details p {
+  margin: 0;
+  font-size: 0.9em;
+  color: #555;
+}
+
+.fundraiser-details {
+  background: #fff;
+  border-radius: 4px;
+  margin: 20px auto;
+  padding: 20px;
+  position: relative;
+  box-shadow: 2px 2px 5px rgba(0,0,0,0.05);
+}
+

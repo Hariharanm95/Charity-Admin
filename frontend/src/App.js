@@ -7,6 +7,7 @@ import Navbar from './components/Navbar';
 import Home from './pages/Home'
 import Login from './pages/Login';
 import Signup from './pages/Signup';
+import Fundraisers from './pages/Fundraisers';
 
 function App() {
   const {user} = useAuthContext()
@@ -21,6 +22,10 @@ function App() {
               element={user?<Home/>:<Navigate to='/login'/>}
             />
             <Route
+              path="/fundraisers"
+              element={(user)?<Fundraisers/>:<Navigate to='/login'/>}
+            />
+            <Route
               path="/login"
               element={(!user)?<Login/>:<Navigate to='/'/>}
             />
@@ -28,6 +33,8 @@ function App() {
               path="/signup"
               element={(!user)?<Signup/>:<Navigate to='/'/>}
             />
+            
+            
           </Routes>
         </div>
       </BrowserRouter>

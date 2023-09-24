@@ -23,11 +23,11 @@ const DonationDetails = ({ donation }) => {
 
     return (
         <div className="donation-details">
-            <h4>Donation Details: {donation.donations}</h4>
-            <p><strong>User:</strong> {donation.username}</p>
+            <h4>{donation.username}</h4>
+            {/* <p><strong>username:</strong> {donation.username}</p> */}
             <p><strong>email:</strong> {donation.email}</p>
-            <p><strong>password:</strong> {donation.password}</p>
-            <p><strong>Charity:</strong> {donation[donation.charities]}</p>
+            {/* <p><strong>password:</strong> {donation.password}</p> */}
+            {/* <p><strong>Charity:</strong> {donation[donation.charities]}</p> */}
             {/* <p>{formatDistanceToNow(new Date(donation.donationDate), { addSuffix: true })}</p> */}
             <span className="material-symbols-outlined" onClick={handleClick}>
                 Delete

@@ -19,10 +19,19 @@ const Navbar = () => {
                     {user &&
                     (<div>
                             <span>{user.email}</span>
+                             <Link to="/fundraisers" className='fundButton' style={{
+                                backgroundColor:"white",
+                                color:"black",
+                                padding: "6px 10px",
+                                borderRadius:"4px"
+                             }}>Fundraisers</Link>
+
+                            
                             <button onClick={handleClick}>Log Out</button>
                         </div>
                     )}
                     {!user &&( <div>
+                       
                         <Link to="/login">Login</Link>
                         <Link to="/signup">SignUp</Link>
                     </div>)}
